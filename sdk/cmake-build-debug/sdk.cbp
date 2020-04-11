@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sdk"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sdk">
+				<Option output="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/libsdk.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/glib-2.0"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/lib/glib-2.0/include"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/c++/4.9.2"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/c++/4.9.2/arm-oe-linux-gnueabi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/atcacert"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/basic"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto/hashes"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal/old"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/host"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/jwt"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/common"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/curl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/data"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsutils"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/cutils"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/hardware"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal/core"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux/spi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mcm"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mqtt"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl/openssl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi-framework"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk_inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 sdk"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sdk/fast">
+				<Option output="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/libsdk.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/glib-2.0"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/lib/glib-2.0/include"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/c++/4.9.2"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/sim_crosscompile/sysroots/mdm9607-perf/usr/include/c++/4.9.2/arm-oe-linux-gnueabi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/atcacert"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/basic"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto/hashes"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal/old"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/host"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/jwt"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/common"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/curl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/data"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsutils"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/cutils"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/hardware"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal/core"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux/spi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mcm"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mqtt"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl/openssl"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi-framework"/>
+					<Add directory="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk_inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 sdk/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/ALSAControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/ATControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/DEVControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/DMSControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/DataCall.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/DnsResolv.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/NASControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/SMSControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/TTSControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/UIMControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/VoiceCall.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/WDSControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/WiFiControl.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/sdkVersion.c">
+			<Option target="sdk"/>
+		</Unit>
+		<Unit filename="/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

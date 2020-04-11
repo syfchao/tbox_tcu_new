@@ -1,0 +1,42 @@
+/fpp/soft/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk
+-- The C compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/atcacert
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/basic
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/crypto/hashes
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/hal/old
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/host
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../inc/cryptoauthlib/jwt
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/common
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/curl
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/data
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsi
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/dsutils
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/cutils
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/hardware
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/gps/loc-hal/core
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/linux/spi
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mcm
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/mqtt
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/openssl/openssl
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk-includes/qmi-framework
+include dir: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/../sdk_inc
+-- CMAKE_SOURCE_DIR/home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/renhono/CLionProjects/sim_open_sdk/tbox_tcu_new/sdk/cmake-build-debug

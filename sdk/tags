@@ -1,0 +1,409 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALSATTS_AT_END	TTSControl.c	20;"	d	file:
+ALSATTS_AT_END_ERROR	TTSControl.c	21;"	d	file:
+ALSATTS_AT_START	TTSControl.c	19;"	d	file:
+ALSATTS_EXT_MSG_FIFO	TTSControl.c	18;"	d	file:
+ALSATTS_POC_END	TTSControl.c	23;"	d	file:
+ALSATTS_POC_END_ERROR	TTSControl.c	24;"	d	file:
+ALSATTS_POC_START	TTSControl.c	22;"	d	file:
+ALSA_CLIENT_FIFO	ALSAControl.c	9;"	d	file:
+ALSA_CLIENT_FIFO	TTSControl.c	16;"	d	file:
+ALSA_DAEMON_FIFO	ALSAControl.c	10;"	d	file:
+ALSA_DAEMON_FIFO	TTSControl.c	17;"	d	file:
+AT_SetMuteInitValue	ATControl.c	/^void AT_SetMuteInitValue()$/;"	f
+CHAR_TO_OCTET	SMSControl.c	/^ char CHAR_TO_OCTET( char ch)$/;"	f	signature:( char ch)
+CN_5G_channel_list	WiFiControl.c	/^const static int CN_5G_channel_list[] ={$/;"	v	file:
+CallMute	ATControl.c	/^int CallMute(void)$/;"	f	signature:(void)
+ChangetoDnsNameFormat	DnsResolv.c	/^void ChangetoDnsNameFormat (unsigned char*,unsigned char*);$/;"	p	file:	signature:(unsigned char*,unsigned char*)
+ChangetoDnsNameFormat	DnsResolv.c	/^void ChangetoDnsNameFormat(unsigned char* dns,unsigned char* host) $/;"	f	signature:(unsigned char* dns,unsigned char* host)
+DMS_QMI_TIMEOUT_VALUE	DMSControl.c	13;"	d	file:
+DNS_HEADER	DnsResolv.c	/^struct DNS_HEADER$/;"	s	file:
+DNS_HEADER::aa	DnsResolv.c	/^    unsigned char aa :1; \/\/ authoritive answer$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::ad	DnsResolv.c	/^    unsigned char ad :1; \/\/ authenticated data$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::add_count	DnsResolv.c	/^    unsigned short add_count; \/\/ number of resource entries$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::ans_count	DnsResolv.c	/^    unsigned short ans_count; \/\/ number of answer entries$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::auth_count	DnsResolv.c	/^    unsigned short auth_count; \/\/ number of authority entries$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::cd	DnsResolv.c	/^    unsigned char cd :1; \/\/ checking disabled$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::id	DnsResolv.c	/^    unsigned short id; \/\/ identification number$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::opcode	DnsResolv.c	/^    unsigned char opcode :4; \/\/ purpose of message$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::q_count	DnsResolv.c	/^    unsigned short q_count; \/\/ number of question entries$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::qr	DnsResolv.c	/^    unsigned char qr :1; \/\/ query\/response flag$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::ra	DnsResolv.c	/^    unsigned char ra :1; \/\/ recursion available$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::rcode	DnsResolv.c	/^    unsigned char rcode :4; \/\/ response code$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::rd	DnsResolv.c	/^    unsigned char rd :1; \/\/ recursion desired$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::tc	DnsResolv.c	/^    unsigned char tc :1; \/\/ truncated message$/;"	m	struct:DNS_HEADER	file:	access:public
+DNS_HEADER::z	DnsResolv.c	/^    unsigned char z :1; \/\/ its z! reserved$/;"	m	struct:DNS_HEADER	file:	access:public
+DSI_PROFILE_3GPP2_OFFSET	DataCall.c	35;"	d	file:
+EXT_POC_TTS_PLAY_GBK	TTSControl.c	15;"	d	file:
+EXT_POC_TTS_PLAY_UTF16LE	TTSControl.c	14;"	d	file:
+FAIL	WiFiControl.c	45;"	d	file:
+FALSE	SMSControl.c	15;"	d	file:
+FALSE	WiFiControl.c	53;"	d	file:
+HexNumberToAscii	WiFiControl.c	/^static unsigned char HexNumberToAscii(unsigned char value)$/;"	f	file:	signature:(unsigned char value)
+LOG	DMSControl.c	12;"	d	file:
+LOG	NASControl.c	11;"	d	file:
+LOG	UIMControl.c	12;"	d	file:
+LOG	VoiceCall.c	13;"	d	file:
+LOG	WDSControl.c	12;"	d	file:
+LOG_PATH	WiFiControl.c	990;"	d	file:
+MAX_BUFFER_SIZE	WiFiControl.c	24;"	d	file:
+MAX_ELEMENT_COUNT	WiFiControl.c	48;"	d	file:
+MAX_ELEMENT_LENGTH	WiFiControl.c	47;"	d	file:
+MCM_SMS_ERROR	SMSControl.c	18;"	d	file:
+MCM_SMS_SUCCESS	SMSControl.c	17;"	d	file:
+MCM_SMS_TEST_LOG	SMSControl.c	24;"	d	file:
+MCM_SMS_TEST_LOG_ERROR	SMSControl.c	20;"	d	file:
+MCM_SMS_TEST_LOG_FUNC_ENTRY	SMSControl.c	27;"	d	file:
+MCM_SMS_TEST_LOG_FUNC_EXIT	SMSControl.c	29;"	d	file:
+MuteValue	ATControl.c	102;"	d	file:
+NO_WORKING	TTSControl.c	/^	NO_WORKING,$/;"	e	enum:thread_working	file:
+OCTET_TO_CHAR	SMSControl.c	/^char OCTET_TO_CHAR(char octet)$/;"	f	signature:(char octet)
+PARAM_MAX_LEN	ALSAControl.c	15;"	d	file:
+PARAM_MAX_LEN	TTSControl.c	25;"	d	file:
+PARAM_MAX_NUM	ALSAControl.c	16;"	d	file:
+PARAM_MAX_NUM	TTSControl.c	26;"	d	file:
+POC_ALSA_CLIENT_FIFO	ALSAControl.c	299;"	d	file:
+POC_ALSA_DAEMON_FIFO	ALSAControl.c	300;"	d	file:
+QUERY	DnsResolv.c	/^} QUERY;$/;"	t	typeref:struct:__anon1	file:
+QUESTION	DnsResolv.c	/^struct QUESTION$/;"	s	file:
+QUESTION::qclass	DnsResolv.c	/^    unsigned short qclass;$/;"	m	struct:QUESTION	file:	access:public
+QUESTION::qtype	DnsResolv.c	/^    unsigned short qtype;$/;"	m	struct:QUESTION	file:	access:public
+RES_RECORD	DnsResolv.c	/^struct RES_RECORD$/;"	s	file:
+RES_RECORD::name	DnsResolv.c	/^    unsigned char *name;$/;"	m	struct:RES_RECORD	file:	access:public
+RES_RECORD::rdata	DnsResolv.c	/^    unsigned char *rdata;$/;"	m	struct:RES_RECORD	file:	access:public
+RES_RECORD::resource	DnsResolv.c	/^    struct R_DATA *resource;$/;"	m	struct:RES_RECORD	typeref:struct:RES_RECORD::R_DATA	file:	access:public
+RMNET0_NAME	DataCall.c	33;"	d	file:
+RMNET1_NAME	DataCall.c	34;"	d	file:
+R_DATA	DnsResolv.c	/^struct R_DATA$/;"	s	file:
+R_DATA::_class	DnsResolv.c	/^    unsigned short _class;$/;"	m	struct:R_DATA	file:	access:public
+R_DATA::data_len	DnsResolv.c	/^    unsigned short data_len;$/;"	m	struct:R_DATA	file:	access:public
+R_DATA::ttl	DnsResolv.c	/^    unsigned int ttl;$/;"	m	struct:R_DATA	file:	access:public
+R_DATA::type	DnsResolv.c	/^    unsigned short type;$/;"	m	struct:R_DATA	file:	access:public
+ReadName	DnsResolv.c	/^u_char* ReadName(unsigned char* reader,unsigned char* buffer,int* count)$/;"	f	signature:(unsigned char* reader,unsigned char* buffer,int* count)
+ReadName	DnsResolv.c	/^unsigned char* ReadName (unsigned char*,unsigned char*,int*);$/;"	p	file:	signature:(unsigned char*,unsigned char*,int*)
+SASTORAGE_DATA	DataCall.c	31;"	d	file:
+SASTORAGE_FAMILY	DataCall.c	30;"	d	file:
+SA_DATA	DataCall.c	29;"	d	file:
+SA_FAMILY	DataCall.c	28;"	d	file:
+SCAN_TEMP_FILE	WiFiControl.c	50;"	d	file:
+SDK_VERSION	sdkVersion.c	11;"	d	file:
+SOCK_BIND_ERROR	WiFiControl.c	30;"	d	file:
+SOCK_BIND_ERROR_LEN	WiFiControl.c	31;"	d	file:
+SOCK_FD_ERROR	WiFiControl.c	28;"	d	file:
+SOCK_FD_ERROR_LEN	WiFiControl.c	29;"	d	file:
+SOCK_OPEN_ERROR	WiFiControl.c	26;"	d	file:
+SOCK_OPEN_ERROR_LEN	WiFiControl.c	27;"	d	file:
+SOCK_RECEIVE_ERROR	WiFiControl.c	42;"	d	file:
+SOCK_RECEIVE_ERROR_LEN	WiFiControl.c	43;"	d	file:
+SOCK_RESPONSE_ERROR	WiFiControl.c	40;"	d	file:
+SOCK_RESPONSE_ERROR_LEN	WiFiControl.c	41;"	d	file:
+SOCK_SEND_COMPLETE_ERROR	WiFiControl.c	35;"	d	file:
+SOCK_SEND_COMPLETE_ERROR_LEN	WiFiControl.c	37;"	d	file:
+SOCK_SEND_ERROR	WiFiControl.c	33;"	d	file:
+SOCK_SEND_ERROR_LEN	WiFiControl.c	34;"	d	file:
+SOCK_TIMEOUT	WiFiControl.c	23;"	d	file:
+SOCK_TIMEOUT_ERROR	WiFiControl.c	38;"	d	file:
+SOCK_TIMEOUT_ERROR_LEN	WiFiControl.c	39;"	d	file:
+SUCCESS	WiFiControl.c	44;"	d	file:
+TIMEOUT_SEC	ALSAControl.c	12;"	d	file:
+TIMEOUT_SEC	TTSControl.c	12;"	d	file:
+TIMEOUT_USEC	ALSAControl.c	13;"	d	file:
+TIMEOUT_USEC	TTSControl.c	13;"	d	file:
+TRUE	SMSControl.c	14;"	d	file:
+TRUE	WiFiControl.c	52;"	d	file:
+TTS_LOG	TTSControl.c	28;"	d	file:
+TTS_WORKING	TTSControl.c	/^	TTS_WORKING,$/;"	e	enum:thread_working	file:
+UIM_QMI_TIMEOUT_VALUE	UIMControl.c	13;"	d	file:
+UPCASE	ALSAControl.c	33;"	d	file:
+WDS_QMI_TIMEOUT_VALUE	WDSControl.c	13;"	d	file:
+WEBCLIENT_WIFIDAEMON_SOCK	WiFiControl.c	20;"	d	file:
+WIFIDAEMON_WEBCLIENT_SOCK	WiFiControl.c	19;"	d	file:
+WIFI_LOG	WiFiControl.c	/^static void WIFI_LOG(const char *format, ...)$/;"	f	file:	signature:(const char *format, ...)
+_SDK_VERSION_H_	sdkVersion.c	2;"	d	file:
+__anon1::name	DnsResolv.c	/^    unsigned char *name;$/;"	m	struct:__anon1	file:	access:public
+__anon1::ques	DnsResolv.c	/^    struct QUESTION *ques;$/;"	m	struct:__anon1	typeref:struct:__anon1::QUESTION	file:	access:public
+__anon2::dsi_tech_val	DataCall.c	/^  unsigned int dsi_tech_val;$/;"	m	struct:__anon2	file:	access:public
+__anon2::tech	DataCall.c	/^  app_tech_e tech;$/;"	m	struct:__anon2	file:	access:public
+__anon3::mcm_client_handle	SMSControl.c	/^  mcm_client_handle_type         mcm_client_handle;$/;"	m	struct:__anon3	file:	access:public
+_class	DnsResolv.c	/^    unsigned short _class;$/;"	m	struct:R_DATA	file:	access:public
+aa	DnsResolv.c	/^    unsigned char aa :1; \/\/ authoritive answer$/;"	m	struct:DNS_HEADER	file:	access:public
+ad	DnsResolv.c	/^    unsigned char ad :1; \/\/ authenticated data$/;"	m	struct:DNS_HEADER	file:	access:public
+add_count	DnsResolv.c	/^    unsigned short add_count; \/\/ number of resource entries$/;"	m	struct:DNS_HEADER	file:	access:public
+alsa_msg	ALSAControl.c	/^typedef struct alsa_msg$/;"	s	file:
+alsa_msg	ALSAControl.c	/^}alsa_msg;$/;"	t	typeref:struct:alsa_msg	file:
+alsa_msg	TTSControl.c	/^typedef struct alsa_msg$/;"	s	file:
+alsa_msg	TTSControl.c	/^}alsa_msg;$/;"	t	typeref:struct:alsa_msg	file:
+alsa_msg::client_pid	ALSAControl.c	/^	pid_t client_pid;$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::client_pid	TTSControl.c	/^	pid_t client_pid;$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::command	ALSAControl.c	/^    char  command[16];$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::command	TTSControl.c	/^    char  command[16];$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::data	ALSAControl.c	/^    unsigned char data[PARAM_MAX_NUM][PARAM_MAX_LEN + 1];$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::data	TTSControl.c	/^    unsigned char data[PARAM_MAX_NUM][PARAM_MAX_LEN + 1];$/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::result	ALSAControl.c	/^	int   result; $/;"	m	struct:alsa_msg	file:	access:public
+alsa_msg::result	TTSControl.c	/^	int   result; $/;"	m	struct:alsa_msg	file:	access:public
+ans_count	DnsResolv.c	/^    unsigned short ans_count; \/\/ number of answer entries$/;"	m	struct:DNS_HEADER	file:	access:public
+ap_index	WiFiControl.c	/^static ap_index_type ap_index;$/;"	v	file:
+app_add_datacall_info	DataCall.c	/^int app_add_datacall_info(dsi_hndl_t handle, int ip_family, app_tech_e tech, int profile)$/;"	f	signature:(dsi_hndl_t handle, int ip_family, app_tech_e tech, int profile)
+app_del_datacall_info	DataCall.c	/^int app_del_datacall_info(int profile)$/;"	f	signature:(int profile)
+app_net_ev_cb	DataCall.c	/^static void app_net_ev_cb( dsi_hndl_t hndl,$/;"	f	file:	signature:( dsi_hndl_t hndl, void * user_data, dsi_net_evt_t evt, dsi_evt_payload_t *payload_ptr)
+app_tech_map_t	DataCall.c	/^} app_tech_map_t;$/;"	t	typeref:struct:__anon2	file:
+at_fd	ATControl.c	/^static int at_fd = -1;$/;"	v	file:
+atctrl_deinit	ATControl.c	/^void atctrl_deinit()$/;"	f
+atctrl_init	ATControl.c	/^int atctrl_init()$/;"	f
+audioPlayTTS	ATControl.c	/^int audioPlayTTS(char *tts)$/;"	f	signature:(char *tts)
+auth_count	DnsResolv.c	/^    unsigned short auth_count; \/\/ number of authority entries$/;"	m	struct:DNS_HEADER	file:	access:public
+callId	VoiceCall.c	/^unsigned char callId;$/;"	v
+cd	DnsResolv.c	/^    unsigned char cd :1; \/\/ checking disabled$/;"	m	struct:DNS_HEADER	file:	access:public
+channel_number	WiFiControl.c	/^const static int channel_number[] = {$/;"	v	file:
+check_ip_and_name_match	DataCall.c	/^int check_ip_and_name_match(char *if_name, char *if_ip)$/;"	f	signature:(char *if_name, char *if_ip)
+check_valid_apindex	WiFiControl.c	/^static boolean check_valid_apindex(int ap_index)$/;"	f	file:	signature:(int ap_index)
+check_valid_channel	WiFiControl.c	/^static int check_valid_channel(const char *country_code, int mode, int channel)$/;"	f	file:	signature:(const char *country_code, int mode, int channel)
+check_valid_ip	DataCall.c	/^static boolean check_valid_ip(char* ip)$/;"	f	file:	signature:(char* ip)
+check_wep_key_string	WiFiControl.c	/^static int check_wep_key_string(char *str, int len, int cur_wep_index, int loop)$/;"	f	file:	signature:(char *str, int len, int cur_wep_index, int loop)
+client_pid	ALSAControl.c	/^	pid_t client_pid;$/;"	m	struct:alsa_msg	file:	access:public
+client_pid	TTSControl.c	/^	pid_t client_pid;$/;"	m	struct:alsa_msg	file:	access:public
+codeconvert_get_utf8_size	SMSControl.c	/^int codeconvert_get_utf8_size(uint8 *in)$/;"	f	signature:(uint8 *in)
+codeconvert_unicode2utf8Str	SMSControl.c	/^static int codeconvert_unicode2utf8Str(uint16 *in, int insize, uint8 *out)  $/;"	f	file:	signature:(uint16 *in, int insize, uint8 *out)
+codeconvert_utf82unicodeStr	SMSControl.c	/^static int codeconvert_utf82unicodeStr(uint8 *in, uint16 *out, int *outsize)  $/;"	f	file:	signature:(uint8 *in, uint16 *out, int *outsize)
+command	ALSAControl.c	/^    char  command[16];$/;"	m	struct:alsa_msg	file:	access:public
+command	TTSControl.c	/^    char  command[16];$/;"	m	struct:alsa_msg	file:	access:public
+country_name	WiFiControl.c	/^const static char *country_name[] = {$/;"	v	file:
+cur_dms_svc_client	DMSControl.c	/^static qmi_client_type  cur_dms_svc_client;$/;"	v	file:
+cur_nas_svc_client	NASControl.c	/^qmi_client_type	 cur_nas_svc_client;$/;"	v
+cur_uim_svc_client	UIMControl.c	/^static qmi_client_type  cur_uim_svc_client;$/;"	v	file:
+cur_voice_svc_client	VoiceCall.c	/^static qmi_client_type cur_voice_svc_client;$/;"	v	file:
+cur_wds_svc_client	WDSControl.c	/^static qmi_client_type  cur_wds_svc_client = NULL;$/;"	v	file:
+data	ALSAControl.c	/^    unsigned char data[PARAM_MAX_NUM][PARAM_MAX_LEN + 1];$/;"	m	struct:alsa_msg	file:	access:public
+data	TTSControl.c	/^    unsigned char data[PARAM_MAX_NUM][PARAM_MAX_LEN + 1];$/;"	m	struct:alsa_msg	file:	access:public
+data_len	DnsResolv.c	/^    unsigned short data_len;$/;"	m	struct:R_DATA	file:	access:public
+datacall_connected_fun	DataCall.c	/^void *datacall_connected_fun(void *pData)$/;"	f	signature:(void *pData)
+datacall_deinit	DataCall.c	/^int datacall_deinit()$/;"	f
+datacall_disconnect_thread	DataCall.c	/^pthread_t datacall_disconnect_thread;$/;"	v
+datacall_disconnected_fun	DataCall.c	/^void datacall_disconnected_fun(dsi_hndl_t handle)$/;"	f	signature:(dsi_hndl_t handle)
+datacall_init	DataCall.c	/^int datacall_init()$/;"	f
+datacall_lock	DataCall.c	/^static pthread_mutex_t datacall_lock; $/;"	v	file:
+dms_deinit	DMSControl.c	/^void dms_deinit()$/;"	f
+dms_init	DMSControl.c	/^int dms_init()$/;"	f
+dms_notifier	DMSControl.c	/^static qmi_client_type              dms_notifier;$/;"	v	file:
+dms_os_params	DMSControl.c	/^static qmi_client_os_params         dms_os_params;$/;"	v	file:
+dms_qmi_init	DMSControl.c	/^static int dms_qmi_init()$/;"	f	file:
+dms_service_object	DMSControl.c	/^static qmi_idl_service_object_type  dms_service_object;$/;"	v	file:
+dms_set_operating_mode	DMSControl.c	/^int dms_set_operating_mode(unsigned char mode)$/;"	f	signature:(unsigned char mode)
+dms_svc_client	DMSControl.c	/^static qmi_client_type              dms_svc_client;$/;"	v	file:
+do_enter_recovery_reset	DEVControl.c	/^static void do_enter_recovery_reset(void)$/;"	f	file:	signature:(void)
+dsatutil_atoi	ALSAControl.c	/^static int dsatutil_atoi$/;"	f	file:	signature:( unsigned int *val_arg_ptr, unsigned char *s, unsigned int r )
+dsi_tech_val	DataCall.c	/^  unsigned int dsi_tech_val;$/;"	m	struct:__anon2	file:	access:public
+ejtts_strlen	TTSControl.c	/^static int ejtts_strlen(const unsigned char *s)$/;"	f	file:	signature:(const unsigned char *s)
+enter_recovery_mode_delay	DEVControl.c	/^static int enter_recovery_mode_delay(void)$/;"	f	file:	signature:(void)
+event_string_tbl	DataCall.c	/^struct event_strings_s event_string_tbl[DSI_EVT_MAX] =$/;"	v	typeref:struct:event_strings_s
+event_strings_s	DataCall.c	/^struct event_strings_s$/;"	s	file:
+event_strings_s::evt	DataCall.c	/^  dsi_net_evt_t evt;$/;"	m	struct:event_strings_s	file:	access:public
+event_strings_s::str	DataCall.c	/^  char * str;$/;"	m	struct:event_strings_s	file:	access:public
+evt	DataCall.c	/^  dsi_net_evt_t evt;$/;"	m	struct:event_strings_s	file:	access:public
+exec_cdelta_cmd	DEVControl.c	/^int exec_cdelta_cmd(const char *path)$/;"	f	signature:(const char *path)
+exec_cusbadb_cmd	DEVControl.c	/^int exec_cusbadb_cmd(bool value)$/;"	f	signature:(bool value)
+g_device_mutex	TTSControl.c	/^pthread_mutex_t g_device_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+g_thread_working	TTSControl.c	/^thread_working g_thread_working;$/;"	v
+getCIMI	ATControl.c	/^int getCIMI(char *pBuff, int size)$/;"	f	signature:(char *pBuff, int size)
+getCPIN	ATControl.c	/^int getCPIN()$/;"	f
+getCREG	ATControl.c	/^int getCREG()$/;"	f
+getCSQ	ATControl.c	/^int getCSQ(uint8_t *rssi)$/;"	f	signature:(uint8_t *rssi)
+getICCID	ATControl.c	/^int getICCID(char *pBuff, int size)$/;"	f	signature:(char *pBuff, int size)
+getIMEI	ATControl.c	/^int getIMEI(char *pBuff, int size)$/;"	f	signature:(char *pBuff, int size)
+getModuleRevision	ATControl.c	/^int getModuleRevision(char *pBuff, int size)$/;"	f	signature:(char *pBuff, int size)
+getSimCardStatus	UIMControl.c	/^int getSimCardStatus(SimCard_Status_type *simStatus)$/;"	f	signature:(SimCard_Status_type *simStatus)
+get_NetworkType	NASControl.c	/^int get_NetworkType(nas_serving_system_type_v01 *serving_system)$/;"	f	signature:(nas_serving_system_type_v01 *serving_system)
+get_SignalStrength	NASControl.c	/^int get_SignalStrength(int *level, int* mode)$/;"	f	signature:(int *level, int* mode)
+get_all_call_info	VoiceCall.c	/^int get_all_call_info(call_info_type *pcall_info_list)$/;"	f	signature:(call_info_type *pcall_info_list)
+get_ap_cfg	WiFiControl.c	/^static wifi_mode_type get_ap_cfg()$/;"	f	file:
+get_ap_cfg	WiFiControl.c	/^static wifi_mode_type get_ap_cfg();$/;"	p	file:
+get_apnInfo	WDSControl.c	/^int get_apnInfo(int profile_index, int* pdp_type, char* apn_str, char *username, char *password)$/;"	f	signature:(int profile_index, int* pdp_type, char* apn_str, char *username, char *password)
+get_auth	WiFiControl.c	/^boolean get_auth(int *auth_type_ptr, int *encrypt_mode_ptr, char *pwd_str, ap_index_type ap_index)$/;"	f	signature:(int *auth_type_ptr, int *encrypt_mode_ptr, char *pwd_str, ap_index_type ap_index)
+get_bcast	WiFiControl.c	/^boolean get_bcast(int *broadcast,ap_index_type ap_index)$/;"	f	signature:(int *broadcast,ap_index_type ap_index)
+get_call_info	VoiceCall.c	/^int get_call_info(uint8_t callid, call_info2_type *pcall_info)$/;"	f	signature:(uint8_t callid, call_info2_type *pcall_info)
+get_channel_mode	WiFiControl.c	/^static boolean get_channel_mode(char *channel_str, int *mode,ap_index_type ap_index)$/;"	f	file:	signature:(char *channel_str, int *mode,ap_index_type ap_index)
+get_client_count	WiFiControl.c	/^int get_client_count(ap_index_type ap_index)$/;"	f	signature:(ap_index_type ap_index)
+get_clvl_value	ALSAControl.c	/^int get_clvl_value(void)$/;"	f	signature:(void)
+get_csdvc_value	ALSAControl.c	/^int get_csdvc_value(void)$/;"	f	signature:(void)
+get_datacall_info_by_handle	DataCall.c	/^int get_datacall_info_by_handle(dsi_hndl_t handle, datacall_info_type *pcallinfo)$/;"	f	signature:(dsi_hndl_t handle, datacall_info_type *pcallinfo)
+get_datacall_info_by_profile	DataCall.c	/^int get_datacall_info_by_profile(int profile, datacall_info_type *pcallinfo)$/;"	f	signature:(int profile, datacall_info_type *pcallinfo)
+get_dhcp	WiFiControl.c	/^boolean get_dhcp(char *host_ip_str, char *start_ip_str, char *end_ip_str, char *time_str)$/;"	f	signature:(char *host_ip_str, char *start_ip_str, char *end_ip_str, char *time_str)
+get_iccid	UIMControl.c	/^int get_iccid(char *pIccid)$/;"	f	signature:(char *pIccid)
+get_imei	DMSControl.c	/^int get_imei(char *pImei)$/;"	f	signature:(char *pImei)
+get_imsi	UIMControl.c	/^int get_imsi(char *imsi)$/;"	f	signature:(char *imsi)
+get_mac_addr	WiFiControl.c	/^boolean get_mac_addr(char *mac_addr, ap_index_type ap_index)$/;"	f	signature:(char *mac_addr, ap_index_type ap_index)
+get_mac_address_from_nv	DMSControl.c	/^int get_mac_address_from_nv(dms_device_mac_enum_v01 device_type, uint8_t *mac_addr)$/;"	f	signature:(dms_device_mac_enum_v01 device_type, uint8_t *mac_addr)
+get_meid	DMSControl.c	/^int get_meid(char *pMeid)$/;"	f	signature:(char *pMeid)
+get_micgain_value	ALSAControl.c	/^int get_micgain_value(void)$/;"	f	signature:(void)
+get_net_status	WiFiControl.c	/^boolean get_net_status(char *net_enable_str)$/;"	f	signature:(char *net_enable_str)
+get_rev_id	DMSControl.c	/^int get_rev_id(char *pRev_id)$/;"	f	signature:(char *pRev_id)
+get_simcom_sdk_version	sdkVersion.c	/^const char * get_simcom_sdk_version(void)$/;"	f	signature:(void)
+get_ssid	WiFiControl.c	/^boolean get_ssid(char *str_SSID, ap_index_type ap_index)$/;"	f	signature:(char *str_SSID, ap_index_type ap_index)
+get_sta_cfg	WiFiControl.c	/^boolean get_sta_cfg(char *ssid_str, char *psk_value)$/;"	f	signature:(char *ssid_str, char *psk_value)
+get_sta_ip	WiFiControl.c	/^boolean get_sta_ip(char *ip_str, int len)$/;"	f	signature:(char *ip_str, int len)
+get_sta_status	WiFiControl.c	/^boolean get_sta_status(uint8 *flag)$/;"	f	signature:(uint8 *flag)
+get_thread_work_status	TTSControl.c	/^int get_thread_work_status(void)$/;"	f	signature:(void)
+get_user_name_pwd	WiFiControl.c	/^boolean get_user_name_pwd(char *sz_usrname, int len_name, char *sz_usrpwd, int len_pwd)$/;"	f	signature:(char *sz_usrname, int len_name, char *sz_usrpwd, int len_pwd)
+get_wifi_mode	WiFiControl.c	/^wifi_mode_type get_wifi_mode()$/;"	f
+get_wifi_status	WiFiControl.c	/^boolean get_wifi_status(uint8 *flag)$/;"	f	signature:(uint8 *flag)
+handle	DataCall.c	/^dsi_hndl_t handle = 0; $/;"	v
+handle_msg_from_alsatts	TTSControl.c	/^void handle_msg_from_alsatts()$/;"	f
+id	DnsResolv.c	/^    unsigned short id; \/\/ identification number$/;"	m	struct:DNS_HEADER	file:	access:public
+init_status	DataCall.c	/^int init_status = 0;$/;"	v
+is_Hex_String	WiFiControl.c	/^static int is_Hex_String(char *str, int len)$/;"	f	file:	signature:(char *str, int len)
+is_ascii_key_string	WiFiControl.c	/^static int is_ascii_key_string(char *str, int len)$/;"	f	file:	signature:(char *str, int len)
+lock_get	ALSAControl.c	/^static int lock_get(int fd)$/;"	f	file:	signature:(int fd)
+lock_get	TTSControl.c	/^int lock_get(int fd)$/;"	f	signature:(int fd)
+lock_set	ALSAControl.c	/^static int lock_set(int fd,int type)  $/;"	f	file:	signature:(int fd,int type)
+lock_set	TTSControl.c	/^int lock_set(int fd,int type)  $/;"	f	signature:(int fd,int type)
+mcm_bin_to_hex	SMSControl.c	/^void mcm_bin_to_hex$/;"	f	signature:( const char * in_str, const int in_str_len, char * out_str, int out_max_len )
+mcm_client_handle	SMSControl.c	/^  mcm_client_handle_type         mcm_client_handle;$/;"	m	struct:__anon3	file:	access:public
+mcm_get_sms_service_center	SMSControl.c	/^int mcm_get_sms_service_center()$/;"	f
+mcm_get_unicode_len	SMSControl.c	/^int mcm_get_unicode_len(unsigned char *inStr)$/;"	f	signature:(unsigned char *inStr)
+mcm_hex_to_bin	SMSControl.c	/^int mcm_hex_to_bin$/;"	f	signature:( const unsigned char * in_str, const int in_str_len, unsigned char * out_str, int out_max_len )
+mcm_ril_service_start	SMSControl.c	/^int mcm_ril_service_start()$/;"	f
+mcm_sms_conf_t	SMSControl.c	/^} mcm_sms_conf_t;$/;"	t	typeref:struct:__anon3	file:
+mcm_sms_config	SMSControl.c	/^mcm_sms_conf_t mcm_sms_config ={0};$/;"	v
+mcm_sms_event_register	SMSControl.c	/^static int mcm_sms_event_register()$/;"	f	file:
+mcm_sms_event_unregister	SMSControl.c	/^static int mcm_sms_event_unregister()$/;"	f	file:
+mcm_sms_init	SMSControl.c	/^static int mcm_sms_init()$/;"	f	file:
+mcm_sms_release	SMSControl.c	/^ void mcm_sms_release()$/;"	f
+mcm_sms_send	SMSControl.c	/^static int mcm_sms_send(mcm_sms_msg_format_t_v01 format, char *dest_addr, unsigned char *data, int data_len)$/;"	f	file:	signature:(mcm_sms_msg_format_t_v01 format, char *dest_addr, unsigned char *data, int data_len)
+mcm_sms_set_service_center	SMSControl.c	/^void mcm_sms_set_service_center()$/;"	f
+mcm_sms_test_async_cb	SMSControl.c	/^static void mcm_sms_test_async_cb$/;"	f	file:	signature:( mcm_client_handle_type hndl, uint32 msg_id, void *resp_c_struct, uint32 resp_c_struct_len, void *token_id )
+mcm_sms_test_cli_ind_cb	SMSControl.c	/^static void mcm_sms_test_cli_ind_cb$/;"	f	file:	signature:( mcm_client_handle_type hndl, uint32 msg_id, void *ind_data, unsigned int ind_buf_len )
+name	DnsResolv.c	/^    unsigned char *name;$/;"	m	struct:RES_RECORD	file:	access:public
+name	DnsResolv.c	/^    unsigned char *name;$/;"	m	struct:__anon1	file:	access:public
+nas_dinit	NASControl.c	/^void nas_dinit()$/;"	f
+nas_get_preference_network	NASControl.c	/^int nas_get_preference_network(mode_pref_mask_type_v01 *mode_pref)$/;"	f	signature:(mode_pref_mask_type_v01 *mode_pref)
+nas_get_serving_system	NASControl.c	/^int nas_get_serving_system(nas_get_serving_system_resp_msg_v01 *serving_system)$/;"	f	signature:(nas_get_serving_system_resp_msg_v01 *serving_system)
+nas_get_signal_strength	NASControl.c	/^int nas_get_signal_strength(nas_get_signal_strength_resp_msg_v01 *signal_strength)$/;"	f	signature:(nas_get_signal_strength_resp_msg_v01 *signal_strength)
+nas_ind_cb	NASControl.c	/^static void nas_ind_cb$/;"	f	file:	signature:( qmi_client_type user_handle, unsigned int msg_id, void *ind_buf, unsigned int ind_buf_len, void *ind_cb_data )
+nas_ind_cb	NASControl.c	/^static void nas_ind_cb$/;"	p	file:	signature:( qmi_client_type user_handle, unsigned int msg_id, void *ind_buf, unsigned int ind_buf_len, void *ind_cb_data )
+nas_ind_register	NASControl.c	/^int nas_ind_register()$/;"	f
+nas_init	NASControl.c	/^int nas_init()$/;"	f
+nas_notifier	NASControl.c	/^static qmi_client_type			    nas_notifier;$/;"	v	file:
+nas_os_params	NASControl.c	/^static qmi_client_os_params 	    nas_os_params;$/;"	v	file:
+nas_qmi_init	NASControl.c	/^static int nas_qmi_init()$/;"	f	file:
+nas_qmi_release	NASControl.c	/^void nas_qmi_release(void)$/;"	f	signature:(void)
+nas_service_object	NASControl.c	/^static qmi_idl_service_object_type  nas_service_object;$/;"	v	file:
+nas_set_preference_network	NASControl.c	/^int nas_set_preference_network(mode_pref_mask_type_v01 mode_pref)$/;"	f	signature:(mode_pref_mask_type_v01 mode_pref)
+nas_svc_client	NASControl.c	/^static qmi_client_type			    nas_svc_client;$/;"	v	file:
+ngethostbyname	DnsResolv.c	/^void ngethostbyname (unsigned char* , int);$/;"	p	file:	signature:(unsigned char* , int)
+opcode	DnsResolv.c	/^    unsigned char opcode :4; \/\/ purpose of message$/;"	m	struct:DNS_HEADER	file:	access:public
+p_auth	WiFiControl.c	/^const char *p_auth[] = { $/;"	v
+p_encrypt	WiFiControl.c	/^const char *p_encrypt[] = {$/;"	v
+q_count	DnsResolv.c	/^    unsigned short q_count; \/\/ number of question entries$/;"	m	struct:DNS_HEADER	file:	access:public
+qclass	DnsResolv.c	/^    unsigned short qclass;$/;"	m	struct:QUESTION	file:	access:public
+qcmap_client_bin_to_hexchar	UIMControl.c	/^static char qcmap_client_bin_to_hexchar(uint8_t ch)$/;"	f	file:	signature:(uint8_t ch)
+qcmap_client_flip_data	UIMControl.c	/^static void qcmap_client_flip_data ( uint8_t* des, const uint8_t* src, uint32_t data_len)$/;"	f	file:	signature:( uint8_t* des, const uint8_t* src, uint32_t data_len)
+qcmap_client_parse_gw_imsi	UIMControl.c	/^static char * qcmap_client_parse_gw_imsi ( const unsigned char * raw_imsi_ptr, unsigned short raw_imsi_len, int* parsed_imsi_len_ptr ) $/;"	f	file:	signature:( const unsigned char * raw_imsi_ptr, unsigned short raw_imsi_len, int* parsed_imsi_len_ptr )
+qr	DnsResolv.c	/^    unsigned char qr :1; \/\/ query\/response flag$/;"	m	struct:DNS_HEADER	file:	access:public
+qtype	DnsResolv.c	/^    unsigned short qtype;$/;"	m	struct:QUESTION	file:	access:public
+query_ip_from_dns	DnsResolv.c	/^int query_ip_from_dns(unsigned char *host, char *pri_dns_ip, char *sec_dns_ip, char *ip)$/;"	f	signature:(unsigned char *host, char *pri_dns_ip, char *sec_dns_ip, char *ip)
+ques	DnsResolv.c	/^    struct QUESTION *ques;$/;"	m	struct:__anon1	typeref:struct:__anon1::QUESTION	file:	access:public
+ra	DnsResolv.c	/^    unsigned char ra :1; \/\/ recursion available$/;"	m	struct:DNS_HEADER	file:	access:public
+rcode	DnsResolv.c	/^    unsigned char rcode :4; \/\/ response code$/;"	m	struct:DNS_HEADER	file:	access:public
+rd	DnsResolv.c	/^    unsigned char rd :1; \/\/ recursion desired$/;"	m	struct:DNS_HEADER	file:	access:public
+rdata	DnsResolv.c	/^    unsigned char *rdata;$/;"	m	struct:RES_RECORD	file:	access:public
+resource	DnsResolv.c	/^    struct R_DATA *resource;$/;"	m	struct:RES_RECORD	typeref:struct:RES_RECORD::R_DATA	file:	access:public
+restore_wifi	WiFiControl.c	/^void restore_wifi()$/;"	f
+result	ALSAControl.c	/^	int   result; $/;"	m	struct:alsa_msg	file:	access:public
+result	TTSControl.c	/^	int   result; $/;"	m	struct:alsa_msg	file:	access:public
+route_setting_thread	DataCall.c	/^pthread_t route_setting_thread;$/;"	v
+s_datacall_info	DataCall.c	/^static datacall_info_type s_datacall_info[MAX_DATACALL_NUM];$/;"	v	file:
+sendATCmd	ATControl.c	/^int sendATCmd(char* atCmd, char* finalRsp, char *buff, uint32_t buffSize, long timeout_ms)$/;"	f	signature:(char* atCmd, char* finalRsp, char *buff, uint32_t buffSize, long timeout_ms)
+send_message	SMSControl.c	/^int send_message(int smsMode, char *phoneNumber, unsigned char *content, int content_len)$/;"	f	signature:(int smsMode, char *phoneNumber, unsigned char *content, int content_len)
+send_msg_to_alsa_daemon	ALSAControl.c	/^static int send_msg_to_alsa_daemon(alsa_msg send_msg, alsa_msg *rev_msg)$/;"	f	file:	signature:(alsa_msg send_msg, alsa_msg *rev_msg)
+send_msg_to_alsa_daemon	TTSControl.c	/^static int send_msg_to_alsa_daemon(alsa_msg send_msg, alsa_msg *rev_msg)$/;"	f	file:	signature:(alsa_msg send_msg, alsa_msg *rev_msg)
+send_msg_to_ext_dmr	ALSAControl.c	/^static int send_msg_to_ext_dmr(alsa_msg send_msg, alsa_msg *rev_msg)$/;"	f	file:	signature:(alsa_msg send_msg, alsa_msg *rev_msg)
+set_ap_cfg	WiFiControl.c	/^static boolean set_ap_cfg(wifi_mode_type mode)$/;"	f	file:	signature:(wifi_mode_type mode)
+set_apnInfo	WDSControl.c	/^int set_apnInfo(int profile_index, int pdp_type, char* apn_str, char *username, char *password)$/;"	f	signature:(int profile_index, int pdp_type, char* apn_str, char *username, char *password)
+set_auth	WiFiControl.c	/^boolean set_auth(char *str_pwd, int auth_type, int  encrypt_mode, ap_index_type ap_index)$/;"	f	signature:(char *str_pwd, int auth_type, int encrypt_mode, ap_index_type ap_index)
+set_bcast	WiFiControl.c	/^boolean set_bcast(int broadcast, ap_index_type ap_index)$/;"	f	signature:(int broadcast, ap_index_type ap_index)
+set_channel_mode	WiFiControl.c	/^static boolean set_channel_mode(int channel, int mode,ap_index_type ap_index)$/;"	f	file:	signature:(int channel, int mode,ap_index_type ap_index)
+set_clvl_value	ALSAControl.c	/^int set_clvl_value(int clvl_value)$/;"	f	signature:(int clvl_value)
+set_csdvc_value	ALSAControl.c	/^int set_csdvc_value(int csdvc_value)$/;"	f	signature:(int csdvc_value)
+set_datacall_info	DataCall.c	/^static void set_datacall_info(dsi_hndl_t handle)$/;"	f	file:	signature:(dsi_hndl_t handle)
+set_host_route	DataCall.c	/^int set_host_route(char *old_ip, char *new_ip, char *if_name)$/;"	f	signature:(char *old_ip, char *new_ip, char *if_name)
+set_micgain_value	ALSAControl.c	/^int set_micgain_value(int micgain_value)$/;"	f	signature:(int micgain_value)
+set_ssid	WiFiControl.c	/^boolean set_ssid(char *SSID, ap_index_type ap_index)$/;"	f	signature:(char *SSID, ap_index_type ap_index)
+set_ssid_and_auth	WiFiControl.c	/^boolean set_ssid_and_auth(char *SSID, char *str_pwd, int auth_type, int  encrypt_mode, ap_index_type ap_index)$/;"	f	signature:(char *SSID, char *str_pwd, int auth_type, int encrypt_mode, ap_index_type ap_index)
+set_sta_cfg	WiFiControl.c	/^boolean set_sta_cfg(char *ssid_str, char *psk_value)$/;"	f	signature:(char *ssid_str, char *psk_value)
+set_thread_work_status	TTSControl.c	/^void set_thread_work_status(thread_working status)$/;"	f	signature:(thread_working status)
+set_user_name_pwd	WiFiControl.c	/^boolean set_user_name_pwd(char *sz_usrname, char *sz_usrpwd)$/;"	f	signature:(char *sz_usrname, char *sz_usrpwd)
+set_wifi_mode	WiFiControl.c	/^boolean set_wifi_mode(wifi_mode_type mode)$/;"	f	signature:(wifi_mode_type mode)
+simcom_get_tts_state	TTSControl.c	/^TTS_STATE simcom_get_tts_state()$/;"	f
+simcom_gethostbyname	DnsResolv.c	/^static int simcom_gethostbyname(unsigned char *host , int query_type, char *dns_server, char *ip)$/;"	f	file:	signature:(unsigned char *host , int query_type, char *dns_server, char *ip)
+simcom_play_tts	TTSControl.c	/^int simcom_play_tts(TTS_CMD tts_action, uint8 *tts_text)$/;"	f	signature:(TTS_CMD tts_action, uint8 *tts_text)
+simcom_stop_tts	TTSControl.c	/^void simcom_stop_tts()$/;"	f
+simcom_tts_init	TTSControl.c	/^int simcom_tts_init()$/;"	f
+sms_cli_ind_cb	SMSControl.c	/^sms_ind_cb_fcn sms_cli_ind_cb;$/;"	v
+sms_deinit	SMSControl.c	/^void sms_deinit()$/;"	f
+sms_init	SMSControl.c	/^int sms_init(sms_ind_cb_fcn sms_ind_cb)$/;"	f	signature:(sms_ind_cb_fcn sms_ind_cb)
+sta_init	WiFiControl.c	/^boolean sta_init(int sta_enable)$/;"	f	signature:(int sta_enable)
+sta_scan	WiFiControl.c	/^boolean sta_scan(char *list_str)$/;"	f	signature:(char *list_str)
+start_dataCall	DataCall.c	/^int start_dataCall(app_tech_e tech, int ip_family, int profile, char *apn, char *username, char *password)$/;"	f	signature:(app_tech_e tech, int ip_family, int profile, char *apn, char *username, char *password)
+stop_dataCall	DataCall.c	/^int stop_dataCall(int profile)$/;"	f	signature:(int profile)
+str	DataCall.c	/^  char * str;$/;"	m	struct:event_strings_s	file:	access:public
+switch_stepSPK	ATControl.c	/^int switch_stepSPK(int spkflag)$/;"	f	signature:(int spkflag)
+sys_mylog3	WiFiControl.c	/^int sys_mylog3(char *plog)$/;"	f	signature:(char *plog)
+tc	DnsResolv.c	/^    unsigned char tc :1; \/\/ truncated message$/;"	m	struct:DNS_HEADER	file:	access:public
+tech	DataCall.c	/^  app_tech_e tech;$/;"	m	struct:__anon2	file:	access:public
+tech_map	DataCall.c	/^app_tech_map_t tech_map[] = {$/;"	v
+thread_working	TTSControl.c	/^typedef enum thread_working{$/;"	g	file:
+thread_working	TTSControl.c	/^}thread_working;$/;"	t	typeref:enum:thread_working	file:
+timingThreadId	ATControl.c	/^static pthread_t timingThreadId;$/;"	v	file:
+token_id	SMSControl.c	/^static int token_id;$/;"	v	file:
+ttl	DnsResolv.c	/^    unsigned int ttl;$/;"	m	struct:R_DATA	file:	access:public
+type	DnsResolv.c	/^    unsigned short type;$/;"	m	struct:R_DATA	file:	access:public
+uim_deinit	UIMControl.c	/^void uim_deinit()$/;"	f
+uim_init	UIMControl.c	/^int uim_init()$/;"	f
+uim_notifier	UIMControl.c	/^static qmi_client_type 			uim_notifier;$/;"	v	file:
+uim_os_params	UIMControl.c	/^static qmi_client_os_params		uim_os_params;$/;"	v	file:
+uim_qmi_init	UIMControl.c	/^static int uim_qmi_init()$/;"	f	file:
+uim_service_object	UIMControl.c	/^static qmi_idl_service_object_type uim_service_object;$/;"	v	file:
+uim_svc_client	UIMControl.c	/^static qmi_client_type 			uim_svc_client;$/;"	v	file:
+voice_deinit	VoiceCall.c	/^void voice_deinit()$/;"	f
+voice_dial	VoiceCall.c	/^int voice_dial(char *callingnumber)$/;"	f	signature:(char *callingnumber)
+voice_ind_cb	VoiceCall.c	/^static void voice_ind_cb$/;"	f	file:	signature:( qmi_client_type user_handle, unsigned int msg_id, void *ind_buf, unsigned int ind_buf_len, void *ind_cb_data )
+voice_ind_cb	VoiceCall.c	/^static void voice_ind_cb$/;"	p	file:	signature:( qmi_client_type user_handle, unsigned int msg_id, void *ind_buf, unsigned int ind_buf_len, void *ind_cb_data )
+voice_ind_register	VoiceCall.c	/^static int voice_ind_register()$/;"	f	file:
+voice_init	VoiceCall.c	/^int voice_init()$/;"	f
+voice_mtcall_process	VoiceCall.c	/^int voice_mtcall_process(voice_call_option option, unsigned char call_id)$/;"	f	signature:(voice_call_option option, unsigned char call_id)
+voice_notifier	VoiceCall.c	/^static qmi_client_type 			   voice_notifier;$/;"	v	file:
+voice_os_params	VoiceCall.c	/^static qmi_client_os_params		   voice_os_params;$/;"	v	file:
+voice_qmi_init	VoiceCall.c	/^static int voice_qmi_init()$/;"	f	file:
+voice_qmi_release	VoiceCall.c	/^void voice_qmi_release(void)$/;"	f	signature:(void)
+voice_svc_client	VoiceCall.c	/^static qmi_client_type 			   voice_svc_client;$/;"	v	file:
+voice_svc_obj	VoiceCall.c	/^static qmi_idl_service_object_type voice_svc_obj;$/;"	v	file:
+wds_client_CreateProfile	WDSControl.c	/^static boolean wds_client_CreateProfile( qmi_client_type qmi_wds_handle, $/;"	f	file:	signature:( qmi_client_type qmi_wds_handle, wds_create_profile_req_msg_v01 *req_msg, wds_create_profile_resp_msg_v01 *resp_msg, qmi_error_type_v01 *qmi_err_num)
+wds_client_GetProfileList	WDSControl.c	/^static boolean wds_client_GetProfileList(qmi_client_type qmi_wds_handle, $/;"	f	file:	signature:(qmi_client_type qmi_wds_handle, wds_get_profile_list_req_msg_v01 *req_msg, wds_get_profile_list_resp_msg_v01 *profilelist, qmi_error_type_v01 *qmi_err_num)
+wds_client_GetProfileSettings	WDSControl.c	/^static boolean wds_client_GetProfileSettings(qmi_client_type qmi_wds_handle, $/;"	f	file:	signature:(qmi_client_type qmi_wds_handle, wds_get_profile_settings_req_msg_v01 *req_msg, wds_get_profile_settings_resp_msg_v01 *resp_msg, qmi_error_type_v01 *qmi_err_num)
+wds_client_ModifyProfileSettings	WDSControl.c	/^static boolean wds_client_ModifyProfileSettings(qmi_client_type qmi_wds_handle, $/;"	f	file:	signature:(qmi_client_type qmi_wds_handle, wds_modify_profile_settings_req_msg_v01 *req_msg, qmi_error_type_v01 *qmi_err_num)
+wds_deinit	WDSControl.c	/^void wds_deinit()$/;"	f
+wds_init	WDSControl.c	/^int wds_init()$/;"	f
+wds_notifier	WDSControl.c	/^static qmi_client_type 			wds_notifier;$/;"	v	file:
+wds_os_params	WDSControl.c	/^static qmi_client_os_params		wds_os_params;$/;"	v	file:
+wds_qmi_init	WDSControl.c	/^static int wds_qmi_init()$/;"	f	file:
+wds_qmi_release	WDSControl.c	/^void wds_qmi_release(void)$/;"	f	signature:(void)
+wds_service_object	WDSControl.c	/^static qmi_idl_service_object_type wds_service_object;$/;"	v	file:
+wds_svc_client	WDSControl.c	/^static qmi_client_type 			wds_svc_client;$/;"	v	file:
+wifi_daemon_free_send_string	WiFiControl.c	/^static void wifi_daemon_free_send_string(char *send_str, char* recv_str)$/;"	f	file:	signature:(char *send_str, char* recv_str)
+wifi_daemon_get_key_value	WiFiControl.c	/^static int wifi_daemon_get_key_value(char* str_buf, const char *key, char *value, int *value_len)$/;"	f	file:	signature:(char* str_buf, const char *key, char *value, int *value_len)
+wifi_daemon_init_send_string	WiFiControl.c	/^static int wifi_daemon_init_send_string(char** send_str, char** recv_str)$/;"	f	file:	signature:(char** send_str, char** recv_str)
+wifi_daemon_read_usr_name_pwd	WiFiControl.c	/^static boolean wifi_daemon_read_usr_name_pwd(char *usr_name, int name_len, char *usr_pwd, int pwd_len)$/;"	f	file:	signature:(char *usr_name, int name_len, char *usr_pwd, int pwd_len)
+wifi_daemon_recv_from_webcli	WiFiControl.c	/^static int wifi_daemon_recv_from_webcli(char *webcli_wifidaemon_buff,$/;"	f	file:	signature:(char *webcli_wifidaemon_buff, int *webcli_wifidaemon_buff_size, int *webcli_sockfd)
+wifi_daemon_save_usr_name_pwd	WiFiControl.c	/^static boolean wifi_daemon_save_usr_name_pwd(char *usr_name, char *usr_pwd)$/;"	f	file:	signature:(char *usr_name, char *usr_pwd)
+wifi_daemon_send_to_webcli	WiFiControl.c	/^static int wifi_daemon_send_to_webcli(char *wifidaemon_webcli_buff,$/;"	f	file:	signature:(char *wifidaemon_webcli_buff, int wifidaemon_webcli_buff_size, char *webcli_wifidaemon_buff, int *webcli_wifidaemon_buff_size, int *webcli_sockfd)
+wifi_daemon_set_key_value	WiFiControl.c	/^static void wifi_daemon_set_key_value(char * send_str, const char *key, const char *value)$/;"	f	file:	signature:(char * send_str, const char *key, const char *value)
+wifi_daemon_webcli_communication	WiFiControl.c	/^static int wifi_daemon_webcli_communication(  char *wifidaemon_webcli_buff,$/;"	f	file:	signature:( char *wifidaemon_webcli_buff, int wifidaemon_webcli_buff_size, char *webcli_wifidaemon_buff, int *webcli_wifidaemon_buff_size)
+wifi_is_W58L	WiFiControl.c	/^static boolean wifi_is_W58L()$/;"	f	file:
+wifi_is_sta_mode	WiFiControl.c	/^boolean wifi_is_sta_mode()$/;"	f
+wifi_power	WiFiControl.c	/^boolean wifi_power(int act)$/;"	f	signature:(int act)
+z	DnsResolv.c	/^    unsigned char z :1; \/\/ its z! reserved$/;"	m	struct:DNS_HEADER	file:	access:public
