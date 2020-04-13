@@ -70,7 +70,7 @@ typedef enum {
 //#define SIMCOM_TEST_UI
 int voiceCall(char *callingNumber, phone_type phoneType);
 
-#define SIM_COM_LIB_USE //20200410
+#define SIM_COM_LIB_USE //20200410 fpp
 
 #ifdef SIM_COM_LIB_USE
 extern "C" void process_simcom_ind_message(simcom_event_e event,void *cb_usr_data);

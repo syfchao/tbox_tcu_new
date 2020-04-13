@@ -68,13 +68,18 @@ int apn_init() {
 int switch9011() {
   int retval = -1;
   char strResult[100];
+  int i;
 
+//  for (i = 0; i < 3; i++) {
   memset(strResult, 0, sizeof(strResult));
   retval = sendATCmd((char *) "AT+CUSBPIDSWITCH=9011,1,1", (char *) "OK", strResult, sizeof(strResult), 20000);
   if (retval > 0) {
     printf("switch9011 strResult:%s,  retval:%d \n", strResult, retval);
     retval = 0;
+//      break;
   }
+//  }
+  //TODO:retry 3
 
   return retval;
 }
@@ -82,14 +87,86 @@ int switch9011() {
 int switchAdb() {
   int retval = -1;
   char strResult[100];
+  int i;
 
+//  for (i = 0; i < 3; i++) {
   memset(strResult, 0, sizeof(strResult));
   retval = sendATCmd((char *) "AT+CUSBADB=1", (char *) "OK", strResult, sizeof(strResult), 20000);
   if (retval > 0) {
     printf("switchAdb strResult:%s,  retval:%d \n", strResult, retval);
     retval = 0;
+//      break;
+  }
+//  }
+  //TODO:retry 3
+
+  return retval;
+}
+
+int atProcess() {
+  bool st9011 = false;
+  bool stAdb = false;
+
+  while (1) {
+    if (check9011() != -1) {
+      printf("ok 9011\n");
+      st9011 = true;
+    } else {
+      printf("no 9011\n");
+      switch9011();
+    }
+    sleep(1);
+
+    if (checkAdb() != -1) {
+      printf("ok adb\n");
+      stAdb = true;
+    } else {
+      printf("no adb\n");
+      switchAdb();
+    }
+
+    sleep(1);
+    if (st9011 && stAdb) {
+
+      printf("break\n");
+      break;
+    }
+
+    sleep(1);
   }
 
+  return 0;
+}
+
+int check9011() {
+  int retval = -1;
+  char strResult[100];
+  int i;
+
+  memset(strResult, 0, sizeof(strResult));
+  retval =
+      sendATCmd((char *) "AT+CUSBPIDSWITCH?", (char *) "+CUSBPIDSWITCH: 9011", strResult, sizeof(strResult), 5000);
+  printf("CUSBPIDSWITCH %d\n", retval);
+  if (retval > 0) {
+    printf("strResult:%s,  retval:%d \n", strResult, retval);
+    retval = 0;
+  }
+  return retval;
+}
+
+int checkAdb() {
+  int retval = -1;
+  char strResult[100];
+  int i;
+
+  memset(strResult, 0, sizeof(strResult));
+  retval =
+      sendATCmd((char *) "AT+CUSBADB?", (char *) "+CUSBADB: 1", strResult, sizeof(strResult), 5000);
+  printf("CUSBADB %d\n", retval);
+  if (retval > 0) {
+    printf("strResult:%s,  retval:%d \n", strResult, retval);
+    retval = 0;
+  }
   return retval;
 }
 

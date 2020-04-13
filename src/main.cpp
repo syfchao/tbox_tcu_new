@@ -8,7 +8,8 @@
 #include "TBoxDataPool.h"
 #include "DataCall.h"
 #include "NASControl.h"
-#include <SMSControl.h>
+#include "SMSControl.h"
+#include "WiFiControl.h"
 #include "network_access_service_v01.h"
 #include "common.h"
 #include "DnsResolv.h"
@@ -35,13 +36,14 @@ using namespace std;
 #define MODE_WAIT_INIT_TIME_OUT   10  /*10s 超时机制*/
 #define MODE_WAIT_PSCS_TIME_OUT  10 /*10s 超时机制*/
 #define MODE_WAIT_DC_TIME_OUT   10  /*10S 超时机制*/
+#define MODE_WAIT_ST_DC_TIME_OUT   2  /*2S 超时机制*/
 
 #define MODE_DATACALL_MAX_COUNT    3  /*最大三次重新拨号*/
 
 void initLog() {
   printf("initLog \n");
 
-  auto sink_cout = make_shared<tioLog::SinkCout>(tioLog::Severity::trace,
+  auto sink_cout = make_shared<tioLog::SinkCout>(tioLog::Severity::debug,
                                                  tioLog::Type::normal,
                                                  "[LOG]%Y%m%d %H:%M:%S.#ms [#severity] (#tag_func) #message"
   );
@@ -81,11 +83,11 @@ void process_simcom_ind_message(simcom_event_e event, void *cb_usr_data) {
 
     case SIMCOM_EVENT_SMS_PP_IND: {
       //唤醒系统
-      if (tboxInfo.operateionStatus.isGoToSleep == 0) {
-        printf("11111111111111 sms \n");
-        tboxInfo.operateionStatus.isGoToSleep = 1;
-        tboxInfo.operateionStatus.wakeupSource = 2;
-      }
+//      if (tboxInfo.operateionStatus.isGoToSleep == 0) {
+//        printf("11111111111111 sms \n");
+//        tboxInfo.operateionStatus.isGoToSleep = 1;
+//        tboxInfo.operateionStatus.wakeupSource = 2;
+//      }
 
       sms_info_type sms_info;
       memcpy((void *) &sms_info, cb_usr_data, sizeof(sms_info));
@@ -96,8 +98,8 @@ void process_simcom_ind_message(simcom_event_e event, void *cb_usr_data) {
         printf("0x%02X ", sms_info.message_content[i]);
       }
       printf("\n");
-    }
       break;
+    }
 
     case SIMCOM_EVENT_NETWORK_IND: {
       network_info_type network_info;
@@ -121,8 +123,8 @@ void process_simcom_ind_message(simcom_event_e event, void *cb_usr_data) {
               "process_simcom_ind_message: networkRegSts =%d\nsignalStrength =%d\n",
               tboxInfo.networkStatus.networkRegSts,
               tboxInfo.networkStatus.signalStrength);
-    }
       break;
+    }
     case SIMCOM_EVENT_DATACALL_CONNECTED_IND:
     case SIMCOM_EVENT_DATACALL_DISCONNECTED_IND: {
       int ret;
@@ -154,7 +156,6 @@ void process_simcom_ind_message(simcom_event_e event, void *cb_usr_data) {
 
           printf("target_ip:%s\n", target_ip_new);
 
-
         } else {
 
         }
@@ -182,30 +183,29 @@ int main(int argc, char *argv[]) {
  */
 
   static uint8_t u8ModemWorkState = MODEM_STATE_INIT;
-  static uint8_t u8ModemCfunTimes = 0;
 
   datacall_info_type datacall_info;
   nas_serving_system_type_v01 nas_status;//网络连接状态;
 
-  static int MaxSignalValue = 0;
-  static int MinSignalValue = 0;
   static int NasCsstate = 0;
   static int NasPsstate = 0;
 
   static unsigned char u8ModemWaitTime = 0;
+  static unsigned char u8DataCallWaitTime = MODE_WAIT_ST_DC_TIME_OUT;
   static unsigned char u8ModemDataCallCount = 0;
-  static unsigned char glDebugLogSwitch = 0;
-  static unsigned char u8ModemCfunEnable = 0;
 
+  uint8_t wifi_status;
   int ret;
-  uint8_t u8SendCount = 0;
-  uint32_t count = 0;
-  char ModelLogSigBuff[512] = {0};
-  uint8_t TspReDatacallReqFlag = 0;
 
   atctrl_init();
-  switch9011();
-  switchAdb();
+//  switch9011();
+//  switchAdb();
+
+  std::thread([]() {
+    logDebug << "atProcess() s " << endl;
+    atProcess();
+    logDebug << "atProcess() e " << endl;
+  }).detach();
 
   std::thread([]() {
 
@@ -220,15 +220,21 @@ int main(int argc, char *argv[]) {
 
   }).detach();
 
-  AT_SetMuteInitValue();
+
+//  AT_SetMuteInitValue();
 
 #if 1
 
   while (1) {
 
-    printf(" start main while \n");
+    printf(" MAIN WHILE \n");
+    logDebug << COLOR(cyan) << "[TIMES] == " << u8ModemWaitTime << " ==" << COLOR(none) << endl;
+
     switch (u8ModemWorkState) {
-      case MODEM_STATE_INIT:
+      case MODEM_STATE_INIT: {
+
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_INIT" << COLOR(none) << endl;
+
         if (NetworkInit() < 0) {
           u8ModemWaitTime++;
           if (u8ModemWaitTime >= MODE_WAIT_INIT_TIME_OUT) {
@@ -256,8 +262,12 @@ int main(int argc, char *argv[]) {
           DEBUGLOG("nas_init success!");
         u8ModemWaitTime = 0;
         u8ModemWorkState = MODEM_STATE_CHECK_PS_CS;
+      }
 
-      case MODEM_STATE_CHECK_PS_CS:get_NetworkType(&nas_status);//new sdk interface
+      case MODEM_STATE_CHECK_PS_CS: {
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_CHECK_PS_CS" << COLOR(none) << endl;
+
+        get_NetworkType(&nas_status);//new sdk interface
         if (nas_status.registration_state == NAS_REGISTERED_V01) /*判断网络是否已经注册*/
         {
           if (tboxInfo.networkStatus.networkRegSts != 1) {
@@ -316,170 +326,95 @@ int main(int argc, char *argv[]) {
           break;
         }
 
-      case MODEM_STATE_DATA_CALL:
+      }
 
-        //printf("jason add modem  77777777777777777777777777\r\n");
-//        memset(target_ip, 0, 16);
+      case MODEM_STATE_DATA_CALL: {
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_DATA_CALL" << COLOR(none) << endl;
+
         start_dataCall(app_tech_auto, DSI_IP_VERSION_4, 4, APN1, NULL, NULL);//new sdk interface
+
         u8ModemWorkState = MODEM_STATE_DATA_CALL_CHECK;
-        u8ModemWaitTime = 0;
+        u8DataCallWaitTime = MODE_WAIT_ST_DC_TIME_OUT;
+      }
 
-      case MODEM_STATE_DATA_CALL_CHECK:
+      case MODEM_STATE_DATA_CALL_CHECK: {
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_DATA_CALL_CHECK" << COLOR(none) << endl;
 
-        //printf("jason add modem  888888888888888888888888888\r\n");
-        //get_datacall_info(&datacall_info);//old sdk interface
+        if (u8DataCallWaitTime > 0) {
+          u8DataCallWaitTime--;
+          break;
+        }
+//        u8DataCallWaitTime = MODE_WAIT_ST_DC_TIME_OUT;
+
         get_datacall_info_by_profile(4, &datacall_info);//new sdk interface
+
         if (datacall_info.status == DATACALL_DISCONNECTED) {
-          tboxInfo.networkStatus.isLteNetworkAvailable = NETWORK_NULL;
+          logNotice << "DATACALL_DISCONNECTED" << endl;
           if (u8ModemWaitTime++ >= MODE_WAIT_DC_TIME_OUT) /*等待10S，还没有连接上重新拨号*/
           {
             u8ModemWaitTime = 0;
             u8ModemDataCallCount++;
-            if (u8ModemDataCallCount >= MODE_DATACALL_MAX_COUNT) {
-              u8ModemDataCallCount = 0;
-              u8ModemWorkState = MODEM_STATE_ENABLE_CFUN;
 
-              printf("jason add modem  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n");
+            if (u8ModemDataCallCount >= MODE_DATACALL_MAX_COUNT) {
+
+              get_wifi_status(&wifi_status);
+              logDebug << "wifi_status" << to_string(wifi_status) << endl;
+              if (wifi_status != 1) {
+                u8ModemWorkState = MODEM_STATE_REBOOT;
+              } else {
+
+                u8ModemDataCallCount = 0;
+                u8ModemWorkState = MODEM_STATE_DATA_CALL;
+              }
+
             } else {
               u8ModemWorkState = MODEM_STATE_DATA_CALL;
 
-              //printf("jason add modem  9999999999999999999\r\n");
             }
           }
         } else {
           u8ModemDataCallCount = 0;
-          tboxInfo.networkStatus.isLteNetworkAvailable = NETWORK_LTE;
-          u8ModemCfunTimes = 0;
           u8ModemWorkState = MODEM_STATE_IDLE_CHECK;
 
-          //printf("jason add modem  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\r\n");
         }
         break;
-      case MODEM_STATE_IDLE_CHECK:
+      }
 
-        if (glDebugLogSwitch == 1) {
-          if ((count++) % 10 == 0) {
+      case MODEM_STATE_IDLE_CHECK: {
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_IDLE_CHECK" << COLOR(none) << endl;
 
-            sendATCmd((char *) "AT+CPSI?", (char *) "OK", ModelLogSigBuff, sizeof(ModelLogSigBuff), 2000);
+        if (u8ModemWaitTime == 0) {
+          u8ModemWaitTime = 30;
 
-            get_SignalStrength((int *) &tboxInfo.networkStatus.signalStrength, &ret);//new sdk interface
-            if (tboxInfo.networkStatus.signalStrength > MaxSignalValue)
-              MaxSignalValue = tboxInfo.networkStatus.signalStrength;
-            if (tboxInfo.networkStatus.signalStrength < MinSignalValue)
-              MinSignalValue = tboxInfo.networkStatus.signalStrength;
-            get_datacall_info_by_profile(4, &datacall_info);//new sdk interface
-            sprintf(VER,
-                    "network  signal strength Max=%d,Min=%d \r\n",
-                    tboxInfo.networkStatus.signalStrength,
-                    MaxSignalValue,
-                    MinSignalValue);
-          }
-        }
-
-        //printf("jason add modem idle check state ^^^^^^^^^^^^^^^^^^^^^^^^\r\n");
-        {
-
-          if (TspReDatacallReqFlag == 1) {
-            u8ModemWorkState = MODEM_STATE_CHECK_PS_CS;
-            TspReDatacallReqFlag = 0;
-            stop_dataCall(4);
-            printf("jason add modem redatacall  ++++++++++++++++++++++++\r\n");
-          }
-          //get_datacall_info(&datacall_info);//old sdk interface
           get_datacall_info_by_profile(4, &datacall_info);//new sdk interface
-          if (u8ModemWaitTime == 0) {
-            u8ModemWaitTime = 30;
-            get_SignalStrength((int *) &tboxInfo.networkStatus.signalStrength, &ret);//new sdk interface
-            get_NetworkType(&nas_status);//new sdk interface
-            if (nas_status.registration_state == NAS_REGISTERED_V01) /*判断网络是否已经注册*/
-            {
-              if (tboxInfo.networkStatus.networkRegSts != 1) {
 
-                if (glDebugLogSwitch == 1) {
-
-                  sprintf(VER, "network signal strength %d \r\n", tboxInfo.networkStatus.signalStrength);
-                }
-              }
-            }
-
-          } else if (u8ModemWaitTime > 0) {
-            u8ModemWaitTime--;
+          if (datacall_info.status == DATACALL_DISCONNECTED) {
+            logNotice << "DATACALL_DISCONNECTED" << endl;
+            u8ModemWorkState = MODEM_STATE_DATA_CALL;
           }
+
+        } else {
+          get_SignalStrength((int *) &tboxInfo.networkStatus.signalStrength, &ret);//new sdk interface
+          sprintf(VER, "network signal strength %d \r\n", tboxInfo.networkStatus.signalStrength);
         }
+
+        if (u8ModemWaitTime > 0) {
+          u8ModemWaitTime--;
+        }
+
+      }
         break;
 
-      case MODEM_STATE_ENABLE_CFUN:
-
-        printf("jason add modem cfun state ______________________________\r\n");
-        if (u8ModemCfunTimes == 0) {
-          if (u8ModemCfunEnable == 0) {
-            u8SendCount = 2;
-            do {
-              if (sendATCmd((char *) "at+cfun=0", (char *) "OK", NULL, 0, 5000) <= 0) {
-                printf("jason add error send +cfun=0 cmd failed XXXXXXXXXXXXXXX\r\n");
-              } else {
-                printf("jason add send +cfun=0 cmd success \r\n");
-                break;
-              }
-              sleep(5);
-              u8SendCount--;
-            } while (u8SendCount > 0);
-
-            u8ModemCfunEnable = 1;
-          } else {
-            u8ModemCfunEnable = 0;
-            u8SendCount = 2;
-
-            do {
-              if (sendATCmd((char *) "at+cfun=1", (char *) "OK", NULL, 0, 5000) <= 0) {
-                printf("jason add error send +cfun=1 cmd failed XXXXXXXXXXXXXXX\r\n");
-              } else {
-                printf("jason add send +cfun=1 cmd success \r\n");
-                break;
-              }
-              sleep(5);
-              u8SendCount--;
-            } while (u8SendCount > 0);
-
-            u8ModemWorkState = MODEM_STATE_CHECK_PS_CS;
-            u8ModemCfunTimes++;
-          }
-          break;
-        }
-
-      case MODEM_STATE_REBOOT:printf("jason add modem reboot state !!!!!!!!!!!!!!!!!!!!!!!!!!\r\n");
-
-        printf("################### exit 2 ###########################\n");
-        u8SendCount = 2;
-        do {
-          if (sendATCmd((char *) "at+cfun=0", (char *) "OK", NULL, 0, 5000) <= 0) {
-            printf("jason add error send +cfun=0 cmd failed XXXXXXXXXXXXXXX\r\n");
-          } else {
-            printf("jason add send +cfun=0 cmd success \r\n");
-            break;
-          }
-          sleep(5);
-          u8SendCount--;
-        } while (u8SendCount > 0);
-
-        sleep(1);
-        u8SendCount = 2;
-
-        do {
-          if (sendATCmd((char *) "at+cfun=1", (char *) "OK", NULL, 0, 5000) <= 0) {
-            printf("jason add error send +cfun=1 cmd failed XXXXXXXXXXXXXXX\r\n");
-          } else {
-            printf("jason add send +cfun=1 cmd success \r\n");
-            break;
-          }
-          sleep(5);
-          u8SendCount--;
-        } while (u8SendCount > 0);
+      case MODEM_STATE_REBOOT: {
+        logDebug << COLOR(MAGENTA) << "MODEM_STATE_REBOOT" << COLOR(none) << endl;
 
         sleep(1);
         system("sys_reboot");
 
         break;
+
+      }
+
       default:break;
     }
 
