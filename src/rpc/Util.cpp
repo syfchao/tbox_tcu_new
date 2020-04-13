@@ -106,6 +106,7 @@ int switchAdb() {
 int atProcess() {
   bool st9011 = false;
   bool stAdb = false;
+  bool stSpk = false;
 
   while (1) {
     if (check9011() != -1) {
@@ -126,7 +127,16 @@ int atProcess() {
     }
 
 //    sleep(1);
-    if (st9011 && stAdb) {
+
+    if (checkSpk() != -1) {
+      printf("ok spk\n");
+      stSpk = true;
+    } else {
+      printf("no spk\n");
+      switchSpk();
+    }
+
+    if (st9011 && stAdb && stSpk) {
 
       printf("break\n");
       break;
@@ -226,6 +236,44 @@ int NetworkInit() {
   }
 
   return 0;
+}
+int checkSpk() {
+  int retval = -1;
+  char strResult[100];
+  int i;
+
+  printf("cccccccccccccccccccc \n");
+
+  memset(strResult, 0, sizeof(strResult));
+  retval =
+//      sendATCmd((char *) "AT+CSDVC?", (char *) "+CSDVC: 3", strResult, sizeof(strResult), 5000);
+      sendATCmd((char *) "AT+CSDVC?", (char *) "+CSDVC: 3", NULL, 0, 5000);
+  printf("CSDVC %d\n", retval);
+  if (retval > 0) {
+    printf("strResult:%s,  retval:%d \n", strResult, retval);
+    retval = 0;
+  }
+  return retval;
+}
+
+int switchSpk() {
+  int retval = -1;
+  char strResult[100];
+  int i;
+  printf("ssssssssssssssss \n");
+
+//  for (i = 0; i < 3; i++) {
+  memset(strResult, 0, sizeof(strResult));
+  retval = sendATCmd((char *) "AT+CSDVC=3", (char *) "OK", strResult, sizeof(strResult), 20000);
+  if (retval > 0) {
+    printf("CSDVC strResult:%s,  retval:%d \n", strResult, retval);
+    retval = 0;
+//      break;
+  }
+//  }
+  //TODO:retry 3
+
+  return retval;
 }
 
 int switchVoiceChannel() {

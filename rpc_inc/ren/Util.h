@@ -27,6 +27,8 @@ extern int switchAdb();
 extern int atProcess();
 extern int check9011();
 extern int checkAdb();
+extern int checkSpk();
+extern int switchSpk();
 
 extern int NetworkInit();
 extern int hangUp_answer();

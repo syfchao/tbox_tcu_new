@@ -228,7 +228,7 @@ int main(int argc, char *argv[]) {
   while (1) {
 
     printf(" MAIN WHILE \n");
-    logDebug << COLOR(cyan) << "[TIMES] == " << u8ModemWaitTime << " ==" << COLOR(none) << endl;
+//    logDebug << COLOR(cyan) << "[TIMES] == " << to_string(u8ModemWaitTime) << " ==" << COLOR(none) << endl;
 
     switch (u8ModemWorkState) {
       case MODEM_STATE_INIT: {
@@ -395,7 +395,8 @@ int main(int argc, char *argv[]) {
 
         } else {
           get_SignalStrength((int *) &tboxInfo.networkStatus.signalStrength, &ret);//new sdk interface
-          sprintf(VER, "network signal strength %d \r\n", tboxInfo.networkStatus.signalStrength);
+
+//          sprintf(VER, "network signal strength %d \r\n", tboxInfo.networkStatus.signalStrength);
         }
 
         if (u8ModemWaitTime > 0) {
