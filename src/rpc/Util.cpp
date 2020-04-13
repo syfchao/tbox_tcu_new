@@ -115,7 +115,7 @@ int atProcess() {
       printf("no 9011\n");
       switch9011();
     }
-    sleep(1);
+//    sleep(1);
 
     if (checkAdb() != -1) {
       printf("ok adb\n");
@@ -125,14 +125,14 @@ int atProcess() {
       switchAdb();
     }
 
-    sleep(1);
+//    sleep(1);
     if (st9011 && stAdb) {
 
       printf("break\n");
       break;
     }
 
-    sleep(1);
+    sleep(5);
   }
 
   return 0;
